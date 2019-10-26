@@ -1,5 +1,8 @@
 
 def even_numbers(amount):
+    '''
+    this function creates a list of even numbers that are less than amount
+    '''
     even_list=[]
     for i in range(amount):
         if i % 2 == 0:
@@ -7,6 +10,9 @@ def even_numbers(amount):
     return even_list
 
 def lucky_numbers(amount):
+      '''
+    this function creates a list of lucky numbers that are less than amount
+    '''
     lucky_list = list(range(1, amount + 1, 2)); j = 1
     while lucky_list[j] <= len(lucky_list)-1:
         lucky_list = [lucky_list[i] for i in range(len(lucky_list))\
@@ -18,7 +24,11 @@ import random
 max = 100
 arr = []
 ul_arr = []
-def ulam(amount):
+def ulam_numbers(amount):
+    '''
+    this function creates a list of random ulam numbers, some can be repeated
+    var amount is responcible for the amount of numbers in list
+    '''
     s = set()
     arr.append(1)
     s.add(1)
