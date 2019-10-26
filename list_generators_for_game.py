@@ -20,12 +20,17 @@ def lucky_numbers(amount):
     '''
     this function creates a list of lucky numbers that are less than amount
     '''
+    answ = []
     lucky_list = list(range(1, amount + 1, 2)); j = 1
     while lucky_list[j] <= len(lucky_list)-1:
-        lucky_list = [lucky_list[i] for i in range(len(lucky_list))\
+        lucky_list = [lucky_list[i] for i in range(len(lucky_list))
             if (i + 1) % lucky_list[j] != 0]
         j+=1
-    return(lucky_list)
+    for i in range(amount):
+        n = (random.randint(1, 15))
+        x = lucky_list[n - 1]
+        answ.append(x)
+    return answ
 
 max = 100
 arr = []
