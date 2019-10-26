@@ -1,16 +1,23 @@
-
+import random
 def even_numbers(amount):
     '''
     this function creates a list of even numbers that are less than amount
     '''
-    even_list=[]
-    for i in range(amount):
+    even_1_list = []
+    for i in range(100):
         if i % 2 == 0:
-            even_list.append(i)
+            even_1_list.append(i)
+    even_list = []
+    n = 0
+    for j in range(amount):
+        even_list.append(even_1_list[random.randint(0,len(even_1_list)-1)])
+
+        
     return even_list
 
+
 def lucky_numbers(amount):
-      '''
+    '''
     this function creates a list of lucky numbers that are less than amount
     '''
     lucky_list = list(range(1, amount + 1, 2)); j = 1
@@ -20,7 +27,6 @@ def lucky_numbers(amount):
         j+=1
     return(lucky_list)
 
-import random
 max = 100
 arr = []
 ul_arr = []
